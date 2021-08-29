@@ -4,7 +4,7 @@ import ShowAllEpisodes from '../components/featured/ShowAllEpisodes';
 
 export default function FeaturedPage() {
   return (
-    <Layout title="Featured">
+    <Layout>
       <ShowAllEpisodes />
     </Layout>
   );

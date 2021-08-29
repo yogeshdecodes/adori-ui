@@ -44,7 +44,8 @@ div .logo img {
 }
 
 .midHeadContainer a:hover,
-.LoginContainer a:hover {
+.LoginContainer a:hover,
+.namedate-main-container a:hover {
   background-color: transparent;
   color: var(--primary-color);
 }
@@ -86,4 +87,127 @@ footer.wrapper {
   justify-content: space-between;
   padding: 0 15px 0;
   color: var(--greyText);
+}
+
+.mainContainer {
+  display: grid;
+  margin: 24px auto;
+  min-height: 280px;
+  width: 100%;
+  max-width: 980px;
+}
+
+.section-layout {
+  min-height: 100vh;
+}
+
+.section-layout-container {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.show-info-grid {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  gap: 40px;
+  align-items: center;
+  border-bottom: 10px solid var(--borderLightGrey);
+  padding-bottom: 30px;
+}
+.showCardMetaData {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: rgb(43, 43, 43);
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(225, 228, 232);
+  border-radius: 5px;
+}
+
+.showSubscribeButton button {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: none;
+}
+.play-container {
+  display: flex;
+  align-items: center;
+}
+
+.play-container h3 {
+  margin: 0px;
+  color: white;
+  padding-left: 10px;
+}
+
+.play-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+}
+.play-icon i:hover {
+  transform: scale(1.2, 1.2);
+}
+.descriptionContainer p {
+  font-size: 16px;
+  color: var(--greyText);
+}
+
+.episode-gallery {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  display: grid;
+}
+
+@media screen and (max-width: 896px) {
+  .episode-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 640px) {
+  .episode-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.podcast-banner-image {
+  width: 470px;
+}
+
+.episode-container {
+  border-radius: 5px;
+  background-color: rgb(43, 43, 43);
+}
+
+.namedate-main-container span {
+  color: #a9afb4;
+  font-size: 12px;
+}
+
+.namedate-main-container a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+.timedate-container {
+  padding-left: 10px;
 }

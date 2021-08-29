@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 
 export default function ExplorePage() {
   return (
-    <Layout title="Home">
+    <Layout>
       <h1>Explore page</h1>
     </Layout>
   );

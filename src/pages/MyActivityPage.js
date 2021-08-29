@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 
 export default function MyActivityPage() {
   return (
-    <Layout title="Home">
+    <Layout>
       <h1>My activity page</h1>
     </Layout>
   );

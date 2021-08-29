@@ -5,7 +5,7 @@ const Header = ({ history }) => {
   return (
     <header className="wrapper">
       <div className="logo">
-        <Link href="/">
+        <Link to="/">
           <img src="/images/logo.png" alt="Listen Boise" />
         </Link>
       </div>
