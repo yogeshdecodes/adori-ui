@@ -229,6 +229,7 @@ footer.wrapper {
   padding-left: 10px;
 }
 
+/* remove this to show different UI*/
 .episode-image-container {
   width: 100px;
   float: right;
