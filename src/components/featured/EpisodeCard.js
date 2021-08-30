@@ -6,7 +6,7 @@ export default function EpisodeCard({ episodeData }) {
   const rawDate = new Date(episodeData.publishedOn);
   const publishDate = formatDate(rawDate);
   const podcastImage = episodeData.image.urls.full;
-  const shareLink = `https://shows.listenboise.com/show/not-the-way-i-planned-R9A8Hsu1AaBpWYdN/episode/+${episodeData.slug}`;
+  // const shareLink = `https://shows.listenboise.com/show/not-the-way-i-planned-R9A8Hsu1AaBpWYdN/episode/+${episodeData.slug}`;
   return (
     <div className="episode-container">
       <div className="episode-image-container">
