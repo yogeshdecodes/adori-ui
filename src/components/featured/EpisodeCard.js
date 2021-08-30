@@ -16,13 +16,13 @@ export default function EpisodeCard({ episodeData }) {
       <div className="showCardMetaData custom-border ">
         <div className="play-container">
           <div className="play-icon">
-            <a className="" href="/">
+            <a className="" href="/featured">
               <i className="fas fa-play"></i>
             </a>
           </div>
           <div className="namedate-main-container">
             <h3>
-              <a href="/">{episodeData.name}</a>
+              <a href="/featured">{episodeData.name}</a>
             </h3>
             <div className="timedate-container">
               <span>{timestamp} · </span>

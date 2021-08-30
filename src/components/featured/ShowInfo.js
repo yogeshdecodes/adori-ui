@@ -20,7 +20,7 @@ export default function ShowInfo({ showData }) {
           <div className="showCardMetaData  ">
             <div className="play-container">
               <div className="play-icon">
-                <a className="" href="/">
+                <a className="" href="/featured">
                   <i className="fas fa-play"></i>
                 </a>
               </div>

@@ -18,7 +18,8 @@ body {
 body.dark-mode {
   filter: invert(1) hue-rotate(180deg);
 }
-body.dark-mode img {
+body.dark-mode img,
+.social-links a {
   filter: invert(1) hue-rotate(180deg);
 }
 
@@ -66,6 +67,8 @@ footer.wrapper {
   border-top: 1px solid #dee2e6;
 }
 .social-links {
+  display: flex;
+  justify-content: space-between;
   padding: 15px 15px 0;
 }
 .social-links a {
@@ -129,7 +132,7 @@ footer.wrapper {
   padding: 16px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  background-color: rgb(43, 43, 43);
+  background-color: #d3d3d3;
 }
 .card-container {
   display: flex;
@@ -158,7 +161,6 @@ footer.wrapper {
 
 .play-container h3 {
   margin: 0px;
-  color: white;
   padding-left: 10px;
 }
 
@@ -227,24 +229,31 @@ footer.wrapper {
 
 .episode-container {
   border-radius: 5px;
-  background-color: rgb(43, 43, 43);
+  background-color: #d3d3d3;
 }
 .showCardMetaData.custom-border {
   border-top-left-radius: 5px;
 }
 
 .namedate-main-container span {
-  color: #a9afb4;
+  color: #484b4e;
   font-size: 12px;
 }
 
 .namedate-main-container a {
-  color: white;
+  color: black;
   font-size: 15px;
   text-decoration: none;
 }
 .timedate-container {
   padding-left: 10px;
+}
+
+.dark-mode-container {
+  display: flex;
+}
+.moon-icon {
+  padding-right: 5px;
 }
 
 /* remove this to show different UI*/
