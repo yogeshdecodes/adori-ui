@@ -15,6 +15,13 @@ body {
   --spacing: 15px;
 }
 
+body.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+body.dark-mode img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 header.wrapper {
   position: sticky;
   top: 0;
@@ -99,6 +106,7 @@ footer.wrapper {
 
 .section-layout {
   min-height: 100vh;
+  background-color: white;
 }
 
 .section-layout-container {
@@ -128,6 +136,8 @@ footer.wrapper {
   flex-direction: column;
   border: 1px solid rgb(225, 228, 232);
   border-radius: 5px;
+  width: fit-content;
+  max-width: 400px;
 }
 
 .showSubscribeButton button {
@@ -199,15 +209,20 @@ footer.wrapper {
     box-shadow: 0 0 30px rgb(0 0 0 / 10%), 0 0 1px rgb(0 0 0 / 40%);
     text-align: center;
   }
+
   .show-info-grid {
     /* grid-template-columns: 1fr; */
     flex-direction: column;
     align-items: flex-start;
   }
+
+  footer.wrapper {
+    margin-bottom: 64px;
+  }
 }
 
 .podcast-banner-image {
-  width: 470px;
+  width: 100%;
 }
 
 .episode-container {

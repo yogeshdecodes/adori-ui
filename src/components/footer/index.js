@@ -1,6 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Footer = () => {
+  const [currentTheme, setCurrentTheme] = useState(
+    localStorage.getItem('theme')
+  );
+
+  useEffect(() => {
+    if (!currentTheme) {
+      localStorage.setItem('theme', 'light');
+      setCurrentTheme('light');
+    } else if (currentTheme === 'dark') {
+      document.getElementsByTagName('body')[0].classList.toggle('dark-mode');
+    } //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const themeHandler = () => {
+    if (currentTheme === 'dark') {
+      document.getElementsByTagName('body')[0].classList.toggle('dark-mode');
+      localStorage.setItem('theme', 'light');
+      setCurrentTheme('light');
+    } else if (currentTheme === 'light') {
+      document.getElementsByTagName('body')[0].classList.toggle('dark-mode');
+      localStorage.setItem('theme', 'dark');
+      setCurrentTheme('dark');
+    }
+  };
+
   return (
     <footer className="wrapper">
       <section className="social-links ">
@@ -41,6 +66,7 @@ const Footer = () => {
         <p> Connect with us and stay updated.</p>
         <p>© 2021 Illiad Media, All Rights Reserved</p>
       </section>
+      <button onClick={themeHandler}>toggle theme</button>
     </footer>
   );
 };
