@@ -107,8 +107,9 @@ footer.wrapper {
 }
 
 .show-info-grid {
-  display: grid;
-  grid-template-columns: 3fr 3fr;
+  /* display: grid; */
+  /* grid-template-columns: 3fr 3fr; */
+  display: flex;
   gap: 40px;
   align-items: center;
   border-bottom: 10px solid var(--borderLightGrey);
@@ -199,7 +200,9 @@ footer.wrapper {
     text-align: center;
   }
   .show-info-grid {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
