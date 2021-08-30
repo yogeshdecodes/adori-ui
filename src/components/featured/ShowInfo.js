@@ -13,9 +13,9 @@ export default function ShowInfo({ showData }) {
           <img
             className="podcast-banner-image"
             loading="lazy"
-            data-src={podcastImageThumb}
+            data-src={podcastImageFull}
             alt={name}
-            src={podcastImageFull}
+            src={podcastImageThumb}
           />
           <div className="showCardMetaData  ">
             <div className="play-container">

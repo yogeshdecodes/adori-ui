@@ -18,7 +18,11 @@ const Footer = () => {
       localStorage.setItem('theme', 'light');
       setCurrentTheme('light');
     } else if (currentTheme === 'dark') {
-      document.getElementsByTagName('html')[0].classList.toggle('dark-mode');
+      let check = document
+        .getElementsByTagName('html')[0]
+        .classList.contains('dark-mode');
+      if (!check)
+        document.getElementsByTagName('html')[0].classList.toggle('dark-mode');
     } //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

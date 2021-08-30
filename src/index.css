@@ -23,8 +23,11 @@ html.dark-mode img {
 }
 
 header.wrapper {
-  position: sticky;
+  /* position: sticky; creating flickering issue*/
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100000;
   display: flex;
   justify-content: space-between;
@@ -101,7 +104,7 @@ footer.wrapper {
 .mainContainer {
   /* display: grid; */
   margin: 24px auto;
-  min-height: 280px;
+  min-height: 70vh;
   width: 100%;
   max-width: 980px;
 }
@@ -112,8 +115,7 @@ footer.wrapper {
 }
 
 .section-layout-container {
-  padding-right: 24px;
-  padding-left: 24px;
+  padding: 64px 24px 0;
 }
 
 .show-info-grid {
@@ -136,10 +138,12 @@ footer.wrapper {
 .card-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   border: 1px solid rgb(225, 228, 232);
   border-radius: 5px;
   width: fit-content;
   max-width: 400px;
+  min-height: 419px;
 }
 
 .showSubscribeButton button {
@@ -160,7 +164,7 @@ footer.wrapper {
 
 .play-container h3 {
   margin: 0px;
-  padding-left: 10px;
+  padding: 0 10px;
 }
 
 .play-icon a {
@@ -192,6 +196,8 @@ footer.wrapper {
 
 .podcast-banner-image {
   width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .episode-container {
@@ -221,6 +227,11 @@ footer.wrapper {
 }
 .moon-icon {
   padding-right: 5px;
+}
+.skeleton-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 @media screen and (max-width: 896px) {
@@ -252,6 +263,10 @@ footer.wrapper {
 
   footer.wrapper {
     margin-bottom: 64px;
+  }
+
+  .skeleton-container {
+    grid-template-columns: 1fr;
   }
 }
 
