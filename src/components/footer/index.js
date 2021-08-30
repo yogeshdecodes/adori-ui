@@ -18,17 +18,17 @@ const Footer = () => {
       localStorage.setItem('theme', 'light');
       setCurrentTheme('light');
     } else if (currentTheme === 'dark') {
-      document.getElementsByTagName('body')[0].classList.toggle('dark-mode');
+      document.getElementsByTagName('html')[0].classList.toggle('dark-mode');
     } //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleChange = (checked) => {
     if (currentTheme === 'dark') {
-      document.getElementsByTagName('body')[0].classList.toggle('dark-mode');
+      document.getElementsByTagName('html')[0].classList.toggle('dark-mode');
       localStorage.setItem('theme', 'light');
       setCurrentTheme('light');
     } else if (currentTheme === 'light') {
-      document.getElementsByTagName('body')[0].classList.toggle('dark-mode');
+      document.getElementsByTagName('html')[0].classList.toggle('dark-mode');
       localStorage.setItem('theme', 'dark');
       setCurrentTheme('dark');
     }
@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
         <div className="dark-mode-container">
           <div className="moon-icon">
-            <i class="fas fa-moon"></i>
+            <i className="fas fa-moon"></i>
           </div>
           <Switch
             onChange={handleChange}

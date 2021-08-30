@@ -15,10 +15,10 @@ body {
   --spacing: 15px;
 }
 
-body.dark-mode {
+html.dark-mode {
   filter: invert(1) hue-rotate(180deg);
 }
-body.dark-mode img,
+html.dark-mode img,
 .social-links a {
   filter: invert(1) hue-rotate(180deg);
 }
