@@ -90,7 +90,7 @@ footer.wrapper {
 }
 
 .mainContainer {
-  display: grid;
+  /* display: grid; */
   margin: 24px auto;
   min-height: 280px;
   width: 100%;
@@ -187,6 +187,20 @@ footer.wrapper {
   .episode-gallery {
     grid-template-columns: 1fr;
   }
+
+  .midHeadContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 0 0 30px rgb(0 0 0 / 10%), 0 0 1px rgb(0 0 0 / 40%);
+    text-align: center;
+  }
+  .show-info-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .podcast-banner-image {
@@ -196,6 +210,9 @@ footer.wrapper {
 .episode-container {
   border-radius: 5px;
   background-color: rgb(43, 43, 43);
+}
+.showCardMetaData.custom-border {
+  border-top-left-radius: 5px;
 }
 
 .namedate-main-container span {
@@ -210,4 +227,10 @@ footer.wrapper {
 }
 .timedate-container {
   padding-left: 10px;
+}
+
+.episode-image-container {
+  width: 100px;
+  float: right;
+  border-top-right-radius: 5px;
 }

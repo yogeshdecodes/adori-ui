@@ -9,11 +9,11 @@ export default function EpisodeCard({ episodeData }) {
   const shareLink = `https://shows.listenboise.com/show/not-the-way-i-planned-R9A8Hsu1AaBpWYdN/episode/+${episodeData.slug}`;
   return (
     <div className="episode-container">
-      <div>
-        <img alt="episode" width="100%" src={podcastImage}></img>
+      <div className="episode-image-container">
+        <img width="100%" alt="episode" src={podcastImage}></img>
       </div>
 
-      <div className="showCardMetaData  ">
+      <div className="showCardMetaData custom-border ">
         <div className="play-container">
           <div className="play-icon">
             <a className="" href="/">

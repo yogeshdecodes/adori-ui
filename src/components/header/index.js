@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+const activeTab = (history, path) => {
+  if (history.location.pathname === path) {
+    return { color: '#33cc99' };
+  }
+};
+
 const Header = ({ history }) => {
   return (
     <header className="wrapper">
@@ -11,15 +17,27 @@ const Header = ({ history }) => {
       </div>
 
       <div className="midHeadContainer">
-        <Link className="nav-item" to="/featured">
+        <Link
+          style={activeTab(history, '/featured')}
+          className="nav-item"
+          to="/featured"
+        >
           <i className="fa fa-headphones"></i>
           <span>&nbsp;Featured</span>
         </Link>
-        <Link className="nav-item" to="/explore">
+        <Link
+          style={activeTab(history, '/explore')}
+          className="nav-item"
+          to="/explore"
+        >
           <i className="fas fa-podcast"></i>
           <span>&nbsp;Explore</span>
         </Link>
-        <Link className="nav-item" to="/myactivity">
+        <Link
+          style={activeTab(history, '/myactivity')}
+          className="nav-item"
+          to="/myactivity"
+        >
           <i className="fas fa-user"></i>
           <span>&nbsp;My Podcasts</span>
         </Link>
