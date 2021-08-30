@@ -18,9 +18,8 @@ body {
 html.dark-mode {
   filter: invert(1) hue-rotate(180deg);
 }
-html.dark-mode img,
-.social-links a {
-  filter: invert(1) hue-rotate(180deg);
+html.dark-mode img {
+  filter: invert(1) hue-rotate(180deg) brightness(2) contrast(0.8);
 }
 
 header.wrapper {
@@ -191,38 +190,6 @@ footer.wrapper {
   display: grid;
 }
 
-@media screen and (max-width: 896px) {
-  .episode-gallery {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (max-width: 640px) {
-  .episode-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .midHeadContainer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background: #fff;
-    box-shadow: 0 0 30px rgb(0 0 0 / 10%), 0 0 1px rgb(0 0 0 / 40%);
-    text-align: center;
-  }
-
-  .show-info-grid {
-    /* grid-template-columns: 1fr; */
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  footer.wrapper {
-    margin-bottom: 64px;
-  }
-}
-
 .podcast-banner-image {
   width: 100%;
 }
@@ -254,6 +221,38 @@ footer.wrapper {
 }
 .moon-icon {
   padding-right: 5px;
+}
+
+@media screen and (max-width: 896px) {
+  .episode-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 640px) {
+  .episode-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .midHeadContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 0 0 30px rgb(0 0 0 / 10%), 0 0 1px rgb(0 0 0 / 40%);
+    text-align: center;
+  }
+
+  .show-info-grid {
+    /* grid-template-columns: 1fr; */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer.wrapper {
+    margin-bottom: 64px;
+  }
 }
 
 /* remove this to show different UI*/
